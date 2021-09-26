@@ -1,0 +1,62 @@
+/* Dashboard style */
+.dash {
+   .weather {
+      display: flex;
+      align-items: center;
+      color: $main;
+
+      #temp {
+         margin-right: 5px;
+         color: #000;
+      }
+      #lct {
+         margin-left: 5px;
+         margin-right: 5px;
+         color: #000;
+      }
+      #time {
+         margin-left: 5px;
+         color: #000;
+      }
+   }
+   
+   .static{
+      background-color: none;
+      color: $white;
+      border-radius: 10px;
+
+      .row {
+         --bs-gutter-x: 0;
+      }
+      .stat {
+         padding: 10px 20px;
+         margin: 10px;
+         background-color: $white;
+         color: $dark;
+         border-radius: 10px;
+         box-shadow: rgba(0, 0, 0, 0.04) 0px 15px 25px -5px, rgba(0, 0, 0, 0.05) 0px 10px 10px -5px;
+         display: flex;
+         align-items: center;
+
+         i {
+            padding: 10px;
+            background-color: $second;
+            color: $white;
+            font-size: 36px;
+            border-radius: 10px;
+         }
+
+         .value {
+            padding: 0px 15px;
+            display: flex;
+            flex-direction: column;
+
+            span {
+               margin-top: 10px;
+               font-weight: bold;
+               font-size: 27px;
+            }
+         }
+      }
+   }   
+}

@@ -1,0 +1,119 @@
+/* Dark Mode */
+.dark-mode {
+   background-color: $bg-dark;
+   color: $white;
+   // Nav-bar Style
+   nav {
+      background-color: $dark;
+
+      .links {
+         a {
+            background-color: $bg-dark;
+            color: #ddd;
+            &:hover{
+               color: $main;
+            }
+         }
+      }
+      .line{
+         background-color: $main;
+      }
+   }
+   .dark-switch {
+      color: #ddd;
+      .switch {
+         div:first-child {
+            background-color: $bg-dark;
+         }
+         div:last-child {
+            background-color: $main;
+            
+         }
+      }
+   }
+   
+   .content {
+      .header {
+         .weather {
+            #temp {
+               color: $white;
+            }
+            #lct {
+               color: $white;
+            }
+            #time {
+               color: $white;
+            }
+         }
+      }
+
+      .static {
+         background-color: $bg-dark;
+         color: $white;
+         
+         .stat {
+            background-color: $main;
+            color: #eee;
+            i {
+               background-color: $dark;
+            }
+         }
+      }
+      
+      .res {
+         background-color: $dark;
+         color: #eee;
+         
+
+         thead th {
+            background-color: $dark;
+            color: #eee;
+            border: 1px solid $bg-dark;
+            border-bottom: none;
+         }
+         tbody td {
+            color: #eee;
+            border: 1px solid $dark;
+            border-bottom-color: $dark;
+            background-color: $bg-dark;
+         }
+         &:last-child {
+            border-radius: 10px;
+         }
+      }
+
+      .show-posts {
+         background-color: $dark;
+         color: #eee;
+         .search-field {
+            .search {
+               border: 2px solid $main;
+            }
+      
+            button {
+               background-color: $main;
+               border: 2px solid $main;
+            }
+         }
+         
+      }
+      .add-posts {
+         background-color: $dark;
+
+         .form {
+            .form-control {
+               background-color: $bg-dark;
+               color: $white;
+            }
+         }
+      }
+      
+   }
+   .show-users {
+      color: $white;
+      background-color: $dark;
+   }
+   .no-more {
+      color: $white;
+   }
+}

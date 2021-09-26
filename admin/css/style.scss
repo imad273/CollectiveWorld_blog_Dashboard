@@ -1,0 +1,270 @@
+// Colors
+$white: #FFF;
+$bg: #F5F7FE;
+$main: #017AE2;
+$second: #33B5F6;
+$btn-hover: #00D1D1;
+$success: #198FFD;
+$success-hover: #037AE9;
+$danger: #ff5252;
+$danger-hover: #f12626;
+$dark: #2A283C;
+$bg-dark: #1D1A29;
+
+/* Standard Style */
+*{
+   font-family: 'Urbanist', sans-serif;
+   padding: 0px;
+   margin: 0px;
+   box-sizing: border-box;
+}
+
+::selection {
+   color: #fff;
+   background-color: $second;
+   
+}
+
+body{
+   overflow-x: hidden;
+   transition: .3s;
+   background-color: $bg;
+}
+
+.btn-primary{
+   background-color: $main;
+   border-color: $main;
+   font-weight: 500;
+
+   i {
+      position: relative;
+      top: 1px;
+      margin-right: 5px;
+   }
+
+   &:hover{
+      background-color: $second;
+      border-color: $second;
+   }   
+}
+
+
+.btn-check:focus+.btn-primary, .btn-primary:focus:focus{
+   background-color: $main;
+   border: 1px solid $main;
+   box-shadow: none;
+}
+.btn-check:focus+.btn-success, .btn-success:focus:focus {
+   background-color: none;
+   border: none;
+   box-shadow: none;
+}
+.btn-success {
+   background-color: $success;
+   border-color: $success;
+   color: #E7F8FF;
+
+   &:hover {
+      background-color: $success-hover;
+      border-color: $success-hover;
+   }
+}
+
+.btn-danger {
+   background-color: $danger;
+   border-color: $danger;
+
+   &:hover {
+      background-color: $danger-hover;
+      border-color: $danger-hover;
+   }
+}
+
+.alert-msg {
+   position: absolute;
+   left: 0px;
+   right: 0px;
+   top: 10px;
+
+   .alert-danger {
+      display: flex;
+      align-items: center;
+      border-left: 5px solid $danger;
+      border-right: 5px solid $danger;
+      background-color: #FFF2F0;
+      color: $danger;
+      border-radius: 0px;
+      font-weight: bold;
+   
+      i{
+         font-size: 26px;
+         margin-right: 18px;
+         margin-left: 8px;
+         position: relative;
+         top: 1px;
+      }
+   }
+   .alert-success{
+      display: flex;
+      align-items: center;
+      border-left: 5px solid $success;
+      border-right: 5px solid $success;
+      background-color: #E7F8FF;
+      color: $success;
+      border-radius: 0px;
+      font-weight: bold;
+   
+      i{
+         font-size: 26px;
+         margin-right: 18px;
+         margin-left: 8px;
+         position: relative;
+         top: 1px;
+      }
+   }
+}
+
+.form-control:focus {
+   border-color: $main;
+   box-shadow: none;
+}
+
+/* Confirm Message */
+#cnfrm {
+   display: none;
+   justify-content: center;
+   align-items: center; 
+   height: 100vh;
+   width: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1111;
+   background-color: rgba(0, 0, 0, 0.750);
+
+   .del-con {
+      font-size: 20px;
+      background-color: $second;
+      border-radius: 10px;
+      margin: 10px;
+      padding: 20px;
+      color: $white;
+      font-weight: 500;
+   }
+}
+
+/* Login Page Style */
+@import 'login';
+
+/* Navbar style */
+@import 'navbar';
+
+/* Right Content Of Every Page */
+// And the same div Style in every Content //
+.content {
+   width: 80%;
+   float: right;
+   width: 80%;
+   float: right;
+   padding: 10px;
+   position: relative;
+   left: 60px;
+   opacity: 0;
+   transition: 500ms ease-in; 
+
+   .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .res {
+      h3 {
+         padding-bottom: 5px;
+      }
+      margin-top: 15px;
+      background-color: $white;
+      color: $dark;
+      padding: 8px 18px;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.03) 0px 15px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+      .table>:not(:last-child)>:last-child>* {
+         border-bottom-color: $main; 
+      }
+      thead th {
+         background-color: $bg;
+         color: $dark;
+         border: 1px solid $main;
+         border-bottom-color: $white;
+      }
+      
+      tbody td {
+         vertical-align: middle;
+         color: $white;
+         border: 1px solid $main;
+         border-bottom-color: $white;
+         background-color: $main;
+      }
+      #title {
+         width: 40%;
+      }
+
+      .load-more {
+         display: flex;
+         justify-content: flex-end;
+      }
+
+      #table {
+         .btns {
+            width: 100px;
+            
+            .edit, .del-btn {
+               float: left;
+               width: 40px;
+               height: 40px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               border-radius: 45%;
+               color: $white; 
+
+               i {
+                  font-size: 20px;
+               }
+            }
+            .edit {
+               color: $white;
+               background-color: #2ce9a4;
+               margin-right: 3px;
+
+               &:hover {
+                  background-color: #aceed6;
+                  color: #29c78d;
+               }
+            }
+            .del-btn {
+               background-color: #ff2d5e;
+               border: none;
+
+               &:hover {
+                  background-color: #f5cbd5;
+                  color: #ff2d5e;
+               }
+            }
+         }
+      }
+   }
+}
+
+/* Dashboard style */
+@import 'dashboard';
+
+/* Posts Page Style */
+@import 'posts';
+
+/* Users Page Style */
+@import 'users';
+
+/* Dark Mode Style */
+@import 'dark-mode';

@@ -1,0 +1,66 @@
+technologies & Tools:
+   - Bootstrap
+   - Sass/Scss
+   - BoxIcon(Icon library)
+   - Google Font (Font library)
+==============================
+===== Database Structure =====
+==============================
+Users Table:
+   - User_id     | int(11)
+   - Username    | varchar(255)
+   - Password    | varchar(255)
+   - Email       | varchar(255)
+   - Member Type | smalint(7)   | 0 For Users and 1 for Admin
+   - Fisrt Name  | varchar(255)
+   - Last Name   | varchar(255)
+   - Date        | Date
+Posts Table:
+   - Post_id  | int(11)
+   - Title    | varchar(255)
+   - Content  | text
+   - Date     | Date
+   - Views    | int(11)
+   - Comments | int(11)
+   - img      | varchar(255)
+Comments Table:
+   - Comment_id | int(11)
+   - User_id    | varchar(255)
+   - Content    | text
+   - Date       | date
+
+
+
+
+
+
+
+==============================
+====== Pages & features ======
+==============================
+admin side:
+   features:
+      - Dark Mode
+      - Manage Posts(Add, Delete, Edit)
+      - Manage users(Add Delete Edit)
+      - Posts views
+
+   Pages:
+      - Overview
+         -stat
+            - Total Users
+            - Total Views
+            - Total Posts
+      - Posts
+      - Users
+      - Profile
+      
+
+
+
+
+
+
+
+
+$stmt = $con->prepare("SELECT items.*, categories.Name AS Cat_Name FROM items INNER JOIN categories ON Cat_ID = ID WHERE ItemID = '$itemid'");
