@@ -44,6 +44,7 @@
          $stmt2->execute();
          $rows = $stmt2->fetchColumn();  ?>
          <input type='hidden' id='all' name='all' value='<?php echo $rows ?>'>
+         
 <?php
       }
    } elseif ($link == 'delete-user') {
@@ -149,3 +150,7 @@
       <input type='hidden' id='all' name='all' value='<?php echo $rows ?>'>
 <?php   
    }
+
+   ?>
+
+   

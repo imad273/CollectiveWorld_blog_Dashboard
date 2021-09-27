@@ -116,24 +116,26 @@
                            </tr>
                         </thead>
                         <tbody>
-                           <tr>
-                              <td>Usss15</td>
-                              <td>Michel</td>
-                              <td>john</td>
-                              <td>12/09/2021</td>
-                           </tr>
-                           <tr>
-                              <td>bdde5</td>
-                              <td>Bet</td>
-                              <td>colsss</td>
-                              <td>12/09/2021</td>
-                           </tr>
-                           <tr>
-                              <td>cros8</td>
-                              <td>Aroind</td>
-                              <td>nige</td>
-                              <td>12/09/2021</td>
-                           </tr>
+                        <?php
+                              $stmt = $con->prepare("SELECT * FROM users ORDER BY UserID DESC LIMIT 3");
+                              $stmt->execute();
+                              while($ftc = $stmt->fetch()) { ?>
+                                 <tr>
+                                    <td><?php echo $ftc['UserName'] ?></td>
+                                    <td><?php echo $ftc['FirstName'] ?></td>
+                                    <td><?php echo $ftc['LastName'] ?></td>
+                                    <td>
+                                    <?php 
+                                       $df_date = $ftc['Date'];
+                                       $date_stmt = $con->prepare("SELECT DATE_FORMAT('$df_date', '%b %D, %Y') AS date");
+                                       $date_stmt->execute();
+                                       $date = $date_stmt->fetch();
+                                       echo $date['date']; ?> 
+                                    </td>
+                                 </tr>
+                        <?php
+                              }
+                           ?>
                         </tbody>
                      </table>
                   </div>                  
@@ -141,7 +143,6 @@
             </div>
          </div>
       </div>
-
 <?php
    } else {
       // when there's no session or admin comming from a external link

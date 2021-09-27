@@ -70,6 +70,9 @@ if (isset($_SESSION['adminid'])) {
       </div>
 <?php
    }
+} else {
+   // when there's no session or admin comming from a external link
+   header("location: index.php");
 }
 
    include "include/footer.html";

@@ -1,6 +1,7 @@
 <?php 
    require "../config.php";
-   /* *Set Title of pages Function */
+
+   /* Set Title of pages Function */
    function setTitle () {
       global $title;
       if(isset($title)){
@@ -10,7 +11,7 @@
       }
    }
 
-   /* *Count items fuction */
+   /* Count items fuction */
    function countItem($item, $table) {
       global $con;
       $stmt = $con->prepare("SELECT COUNT($item) FROM $table");
@@ -18,5 +19,4 @@
       echo $stmt->fetchColumn();
    }
 
-   
 ?>

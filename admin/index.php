@@ -7,12 +7,14 @@
    require "func.php";
    include "include/header.php";
 
+   // If the admin already login
    if(isset($_SESSION['adminid'])) {
       header("location: dashboard.php");
    }
 ?>
 
    <section class="login">
+      <!-- This div make to show Success and error Message -->
       <div id="msg"></div>
       <div class="logo">
          <img src="../images/logo.png" alt="Logo">
@@ -28,7 +30,6 @@
          </div>
          <button class="btn btn-primary w-100" id="botn" onclick="login()">Login</button>
       </form>
-      
    </section>
 
 <?php
