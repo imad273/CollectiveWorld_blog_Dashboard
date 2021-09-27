@@ -210,7 +210,7 @@ body {
 /* Welcome Message Style */
 .welcMsg {
   position: absolute;
-  z-index: 11111;
+  z-index: 111111;
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -244,6 +244,14 @@ nav {
   height: 100vh;
   padding: 20px;
   position: fixed;
+}
+
+nav .humb {
+  display: none;
+}
+
+nav .close {
+  display: none;
 }
 
 nav .brand {
@@ -542,6 +550,32 @@ nav .dark-switch .switch div:last-child {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+
+.content .res #table .btns-users {
+  width: 60px;
+}
+
+.content .res #table .btns-users .del-btn {
+  float: left;
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 45%;
+  color: #FFF;
+  background-color: #ff2d5e;
+}
+
+.content .res #table .btns-users .del-btn i {
+  font-size: 20px;
 }
 
 .content .res #table .btns {
@@ -1000,5 +1034,77 @@ nav .dark-switch .switch div:last-child {
 .dark-mode .settings {
   color: #FFF;
   background-color: #2A283C;
+}
+
+/* Responsive Style */
+@media screen and (max-width: 890px) {
+  nav {
+    z-index: 11111;
+    width: 5%;
+    overflow: hidden;
+  }
+  nav .humb {
+    display: block;
+    font-size: 25px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+  }
+  nav .close {
+    font-size: 25px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+  }
+  nav .brand {
+    display: none;
+    margin-top: 0px;
+  }
+  nav .brand img {
+    width: 31%;
+  }
+  nav .links {
+    margin-left: 50px;
+  }
+  nav .links a {
+    font-size: 15px;
+  }
+  nav .dark-switch {
+    margin-left: 50px;
+  }
+  nav .dark-switch span {
+    font-size: 15px;
+  }
+  .content {
+    width: 94%;
+  }
+  .content .header {
+    font-size: 14px;
+  }
+  .btn-primary {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  nav .brand img {
+    width: 50%;
+  }
+  .content {
+    width: 90%;
+  }
+  .content .header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .content .header h3 {
+    font-size: 30px;
+  }
+  .dash .weather {
+    font-size: 13px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

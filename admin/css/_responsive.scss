@@ -1,0 +1,84 @@
+@media screen and (max-width: 890px){
+   nav {
+      z-index: 11111;
+      width: 5%;
+      overflow: hidden;
+
+      .humb {
+         display: block;
+         font-size: 25px;
+         position: absolute;
+         top: 20px;
+         left: 10px;
+      }
+
+      .close {
+         font-size: 25px;
+         position: absolute;
+         top: 20px;
+         right: 30px;
+      }
+   
+      .brand {
+         display: none;
+         margin-top: 0px;
+         img {
+            width: 31%;
+         }
+      }
+      .links {
+         margin-left: 50px;
+         
+         a {
+            font-size: 15px;
+         }
+      }
+
+      .dark-switch {
+         margin-left: 50px;
+
+         span {
+            font-size: 15px;
+         }
+      }
+   }
+
+   .content {
+      width: 94%;
+
+      .header {
+         font-size: 14px;
+      }
+   }
+
+   .btn-primary {
+      font-size: 14px;
+   }
+}
+
+@media screen and (max-width: 530px){
+   nav {
+      .brand {
+         img {
+            width: 50%;
+         }
+      }
+   }
+   .content {
+      width: 90%;
+
+      .header {
+         flex-wrap: wrap;
+         justify-content: center;
+
+         h3 {
+            font-size: 30px;
+         }
+      }
+   }
+   .dash {
+      .weather {
+         font-size: 13px;
+      }
+   }
+}

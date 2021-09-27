@@ -104,6 +104,7 @@ body{
          top: 1px;
       }
    }
+
    .alert-success{
       display: flex;
       align-items: center;
@@ -225,6 +226,24 @@ body{
       }
 
       #table {
+         .btns-users {
+            width: 60px;
+            .del-btn {
+               float: left;
+               width: 40px;
+               height: 40px;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               border-radius: 45%;
+               color: $white; 
+               background-color: #ff2d5e;
+
+               i {
+                  font-size: 20px;
+               }
+            }
+         }
          .btns {
             width: 100px;
             
@@ -280,3 +299,6 @@ body{
 
 /* Dark Mode Style */
 @import 'dark-mode';
+
+/* Responsive Style */
+@import 'responsive';

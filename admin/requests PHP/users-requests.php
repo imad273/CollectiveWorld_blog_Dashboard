@@ -22,8 +22,7 @@
                      $date = $date_stmt->fetch();
                      echo $date['date']; ?> 
                </td>
-               <td class="btns">
-                  <a class="btn edit"><i class='bx bxs-pencil'></i></a>
+               <td class="btns-users">
                   <a class="btn btn-danger del-btn" id="del-btn"><i class='bx bxs-trash-alt'></i></a>
                   <div id="cnfrm" class="popup">
                      <div class="del-con"> 
@@ -71,8 +70,7 @@
                      $date = $date_stmt->fetch();
                      echo $date['date']; ?> 
                </td>
-               <td class="btns">
-                  <a class="btn edit"><i class='bx bxs-pencil'></i></a>
+               <td class="btns-users">
                   <a class="btn btn-danger del-btn" id="del-btn"><i class='bx bxs-trash-alt'></i></a>
                   <div id="cnfrm" class="popup">
                      <div class="del-con"> 
@@ -126,8 +124,7 @@
                   $date = $date_stmt->fetch();
                   echo $date['date']; ?> 
             </td>
-            <td class="btns">
-               <a class="btn edit"><i class='bx bxs-pencil'></i></a>
+            <td class="btns-users">
                <a class="btn btn-danger del-btn" id="del-btn"><i class='bx bxs-trash-alt'></i></a>
                <div id="cnfrm" class="popup">
                   <div class="del-con"> 
