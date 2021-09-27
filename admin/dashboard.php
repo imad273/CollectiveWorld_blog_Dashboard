@@ -18,8 +18,7 @@
 
       $stmt = $con->prepare("SELECT * FROM users WHERE UserID = ?");
       $stmt->execute(array($adminid));
-      $rows = $stmt->fetch();
-?>
+      $rows = $stmt->fetch(); ?>
 
       <div class="dash"> 
          <?php
@@ -133,7 +132,7 @@
                                        echo $date['date']; ?> 
                                     </td>
                                  </tr>
-                        <?php
+                           <?php
                               }
                            ?>
                         </tbody>

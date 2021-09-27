@@ -103,8 +103,10 @@
 <!-- AJAX Requests For Users -->
 <script src="js/requests/users-requests.js"></script>
 <script>
-   let all = document.getElementById("all").value;
-   if(all <= 6) {
-      document.getElementById("lm-btn").disabled = true;
+   if(document.getElementById("all") != null) {
+      let all = document.getElementById("all").value;
+      if(all <= 6) {
+         document.getElementById("lm-btn").disabled = true;
+      }
    }
 </script>
