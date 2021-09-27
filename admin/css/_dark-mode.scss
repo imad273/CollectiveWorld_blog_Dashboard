@@ -1,5 +1,10 @@
 /* Dark Mode */
 .dark-mode {
+   .form-control {
+      background-color: $bg-dark;
+      color: $white;
+   }
+   
    background-color: $bg-dark;
    color: $white;
    // Nav-bar Style
@@ -115,5 +120,10 @@
    }
    .no-more {
       color: $white;
+   }
+
+   .settings {
+      color: $white;
+      background-color: $dark;
    }
 }

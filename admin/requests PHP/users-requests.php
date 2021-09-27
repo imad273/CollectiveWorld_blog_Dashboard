@@ -4,7 +4,7 @@
    require "../../config.php";
    $link = isset($_GET['action']) ? $_GET['action'] : false;
    if ($link == 'show-users') {
-      $stmt = $con->prepare("SELECT * FROM users LIMIT 6");
+      $stmt = $con->prepare("SELECT * FROM users WHERE Member_type = 0 LIMIT 6");
       $stmt->execute();
 
       if($stmt->rowCount() > 0) {
@@ -109,7 +109,7 @@
                   <p class='no-more' style='font-weight: 600; font-size: 20px'>No More Posts to show</p>
                </tr>";
       }
-      $stmt = $con->prepare("SELECT * FROM users LIMIT $no, 6");
+      $stmt = $con->prepare("SELECT * FROM users WHERE Member_type = 0 LIMIT $no, 6");
       $stmt->execute();
       while($ftc = $stmt->fetch()){
          $id = $ftc['UserID']; ?>

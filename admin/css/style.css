@@ -129,6 +129,16 @@ body {
   top: 1px;
 }
 
+.form-control {
+  background-color: #F5F7FE;
+  border: 1px solid #33B5F6;
+  resize: none;
+}
+
+.form-control:focus {
+  border-color: #33B5F6;
+}
+
 .form-control:focus {
   border-color: #017AE2;
   -webkit-box-shadow: none;
@@ -341,6 +351,11 @@ nav .dark-switch .switch div:last-child {
   color: #FFF;
 }
 
+.dark-mode .form-control {
+  background-color: #1D1A29;
+  color: #FFF;
+}
+
 .dark-mode nav {
   background-color: #2A283C;
 }
@@ -449,6 +464,11 @@ nav .dark-switch .switch div:last-child {
 
 .dark-mode .no-more {
   color: #FFF;
+}
+
+.dark-mode .settings {
+  color: #FFF;
+  background-color: #2A283C;
 }
 
 /* Right Content Of Every Page */
@@ -717,16 +737,6 @@ nav .dark-switch .switch div:last-child {
           box-shadow: rgba(0, 0, 0, 0.03) 0px 15px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
-.posts .add-posts .form .form-control {
-  border: 1px solid #33B5F6;
-  background-color: #F5F7FE;
-  resize: none;
-}
-
-.posts .add-posts .form .form-control:focus {
-  border-color: #33B5F6;
-}
-
 .posts .add-posts .form .sumbit {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -841,9 +851,38 @@ nav .dark-switch .switch div:last-child {
   cursor: auto;
 }
 
+/* Settings Page Style */
+.settings {
+  color: #2A283C;
+  margin-top: 10px;
+  background-color: #FFF;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.03) 0px 15px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+          box-shadow: rgba(0, 0, 0, 0.03) 0px 15px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.settings .submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.settings .submit .btn {
+  width: 100px;
+}
+
 /* Dark Mode Style */
 /* Dark Mode */
 .dark-mode {
+  background-color: #1D1A29;
+  color: #FFF;
+}
+
+.dark-mode .form-control {
   background-color: #1D1A29;
   color: #FFF;
 }
@@ -956,5 +995,10 @@ nav .dark-switch .switch div:last-child {
 
 .dark-mode .no-more {
   color: #FFF;
+}
+
+.dark-mode .settings {
+  color: #FFF;
+  background-color: #2A283C;
 }
 /*# sourceMappingURL=style.css.map */

@@ -12,7 +12,7 @@ const login = () => {
    let request = new XMLHttpRequest();
 
    request.open("POST", "././requests PHP/login-request.php", true);
-
+   document.getElementById('botn').innerHTML = "Loading";
    request.onreadystatechange = () => {
       if (request.readyState === 4 && request.status === 200) {
          document.getElementById("msg").innerHTML = request.responseText;
@@ -23,4 +23,5 @@ const login = () => {
       }
    }
    request.send(form);
+   document.getElementById('botn').innerHTML = "Login";
 }

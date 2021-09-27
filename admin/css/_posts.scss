@@ -48,15 +48,6 @@
       box-shadow: rgba(0, 0, 0, 0.03) 0px 15px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 
       .form {
-         .form-control {
-            border: 1px solid $second;
-            background-color: $bg;
-            resize: none;
-
-            &:focus {
-               border-color: $second;
-            }
-         }
          .sumbit {
             display: flex;
             justify-content: flex-end;

@@ -124,6 +124,15 @@ body{
    }
 }
 
+.form-control {
+   background-color: $bg;
+   border: 1px solid $second;
+   resize: none;
+
+   &:focus {
+      border-color: $second;
+   }
+}
 .form-control:focus {
    border-color: $main;
    box-shadow: none;
@@ -265,6 +274,9 @@ body{
 
 /* Users Page Style */
 @import 'users';
+
+/* Settings Page Style */
+@import 'settings';
 
 /* Dark Mode Style */
 @import 'dark-mode';

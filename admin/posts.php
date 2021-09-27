@@ -1,11 +1,11 @@
 <?php
-session_start();
-// Title of this page
-$title = "Posts";
-// Import the required filess of this page
-require "func.php";
-require "../config.php";
-include "include/header.php";
+   session_start();
+   // Title of this page
+   $title = "Posts";
+   // Import the required filess of this page
+   require "func.php";
+   require "../config.php";
+   include "include/header.php";
 
 // check if there is a session or not
 if (isset($_SESSION['adminid'])) {
@@ -13,8 +13,8 @@ if (isset($_SESSION['adminid'])) {
    if ($link == 'manage') {  ?>
       <div class="posts">
          <?php
-         // Import Navbar file
-         include "include/navbar.php";
+            // Import Navbar file
+            include "include/navbar.php";
          ?>
          <div class="content" id="content">
             <div class="header">
@@ -86,9 +86,9 @@ if (isset($_SESSION['adminid'])) {
          </div>
       </div>
    <?php
-   } elseif ($link == 'edit-post') { 
+   } elseif ($link == 'edit-post') {
       $id = isset($_GET['id']) && is_numeric($_GET['id']) ? $_GET['id'] : 0; ?>
-      
+
       <div class="posts">
          <?php
          // Import Navbar file
@@ -104,32 +104,32 @@ if (isset($_SESSION['adminid'])) {
                   <h3>Edit Post</h3>
                </div>
                <div class="form" id="form">
-                  
+
                </div>
             </div>
          </div>
       </div>
-         <script>
-            // Edit Post
-            const view_edit_post = (id) => {
-                  let request = new XMLHttpRequest();
-                  let form = new FormData();
+      <script>
+         // Edit Post
+         const view_edit_post = (id) => {
+            let request = new XMLHttpRequest();
+            let form = new FormData();
 
-                  form.append('id', id);
+            form.append('id', id);
 
-                  request.open("POST", "requests PHP/posts-requests.php?action=edit-post", true);
+            request.open("POST", "requests PHP/posts-requests.php?action=edit-post", true);
 
-                  request.onreadystatechange = () => {
-                     if (request.readyState === 4 && request.status === 200) {
-                        document.getElementById("form").innerHTML = request.responseText;
-                        
-                     }
-                  }
+            request.onreadystatechange = () => {
+               if (request.readyState === 4 && request.status === 200) {
+                  document.getElementById("form").innerHTML = request.responseText;
 
-                  request.send(form);
                }
-               window.addEventListener('load', view_edit_post(<?php echo $id ?>))
-         </script>
+            }
+
+            request.send(form);
+         }
+         window.addEventListener('load', view_edit_post(<?php echo $id ?>))
+      </script>
 <?php
    } else {
       header('location: posts.php');
@@ -149,10 +149,10 @@ if (isset($_SESSION['adminid'])) {
 
       request.onreadystatechange = function() {
          if (request.readyState === 4 && request.status === 200) {
-            if(document.getElementById("table") != null) {
+            if (document.getElementById("table") != null) {
                document.getElementById("table").innerHTML = request.responseText;
             }
-            
+
             // Confirm Message
             var confirmMsg = document.getElementById("cnfrm");
             var popup = document.getElementsByClassName("popup");

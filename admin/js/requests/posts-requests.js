@@ -24,8 +24,6 @@ const add_post = () => {
                add_post_element[i].value = "";
             }
             form_img.value = ""; 
-         
-         
       }
    }
    request.send(form); 

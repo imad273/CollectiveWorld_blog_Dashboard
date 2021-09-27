@@ -1,11 +1,11 @@
 <?php
-session_start();
-// Title of this page
-$title = "Users";
-// Import the required filess of this page
-require "func.php";
-require "../config.php";
-include "include/header.php";
+   session_start();
+   // Title of this page
+   $title = "Users";
+   // Import the required filess of this page
+   require "func.php";
+   require "../config.php";
+   include "include/header.php";
 
 // check if there is a session or not
 if (isset($_SESSION['adminid'])) {
@@ -13,8 +13,8 @@ if (isset($_SESSION['adminid'])) {
    if($link == 'manage') { ?>
       <div class="users">
          <?php
-         // Import Navbar file
-         include "include/navbar.php";
+            // Import Navbar file
+            include "include/navbar.php";
          ?>
          <div class="content" id="content">
             <div class="header">
@@ -56,7 +56,7 @@ if (isset($_SESSION['adminid'])) {
 } else {
    header('location: posts.php');
 }
-include "include/footer.html";
+   include "include/footer.html";
 ?>
 <script>
    // Show Posts request

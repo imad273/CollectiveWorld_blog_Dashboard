@@ -26,7 +26,7 @@
             <label for="inputPassword1" class="form-label">Password</label>
             <input type="password" name="password" class="form-control input-login" id="inputPassword1">
          </div>
-         <button class="btn btn-primary w-100" onclick="login()">Login</button>
+         <button class="btn btn-primary w-100" id="botn" onclick="login()">Login</button>
       </form>
       
    </section>

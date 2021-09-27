@@ -7,7 +7,7 @@
       <a href="posts.php"><i class='bx bxs-receipt'></i> Posts</a>
       <a href="users.php"><i class='bx bxs-user-circle'></i> Users</a>
       <div class="line"></div>
-      <a href="#"><i class='bx bxs-cog'></i> Settings</a>
+      <a href="settings.php"><i class='bx bxs-cog'></i> Settings</a>
       <a href="logout.php"><i class='bx bxs-exit'></i> Logout</a>
    </div>
    <div class="dark-switch">
