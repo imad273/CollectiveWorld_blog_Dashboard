@@ -31,28 +31,34 @@ if(content != null){
    }
 }
 
-// Open Menu
+// Menu Variables
 let humb = document.getElementById("humb");
 let menu = document.getElementById("nav");
 let clse = document.getElementById("close");
-humb.addEventListener("click", () => {
-   if(menu.style.width = "5%") {
-      menu.style.width = "75%";
-      humb.style.display = "none";
-      clse.style.display = "block";
-      document.getElementById("brand").style.display = "block";
-      document.getElementById("links").style.marginLeft = "0px";
-      document.getElementById("switch").style.marginLeft = "0px";
-   }
-})
-// Close Menu
-clse.addEventListener("click", () => { 
-   if(menu.style.width = "75%") {
-      menu.style.width = "5%";
-      humb.style.display = "block";
-      clse.style.display = "none";
-      document.getElementById("brand").style.display = "none";
-      document.getElementById("links").style.marginLeft = "50px";
-      document.getElementById("switch").style.marginLeft = "50px";
-   }
-})
+
+if(humb != null) {
+   // Open Menu
+   humb.addEventListener("click", () => {
+      if(menu.style.width = "5%") {
+         menu.style.width = "75%";
+         humb.style.display = "none";
+         clse.style.display = "block";
+         document.getElementById("brand").style.display = "block";
+         document.getElementById("links").style.marginLeft = "0px";
+         document.getElementById("switch").style.marginLeft = "0px";
+      }
+   })
+}
+if(clse != null) {
+   // Close Menu
+   clse.addEventListener("click", () => { 
+      if(menu.style.width = "75%") {
+         menu.style.width = "5%";
+         humb.style.display = "block";
+         clse.style.display = "none";
+         document.getElementById("brand").style.display = "none";
+         document.getElementById("links").style.marginLeft = "50px";
+         document.getElementById("switch").style.marginLeft = "50px";
+      }
+   })
+}
