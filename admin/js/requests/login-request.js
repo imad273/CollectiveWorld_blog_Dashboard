@@ -12,7 +12,7 @@ const login = () => {
    let request = new XMLHttpRequest();
 
    request.open("POST", "././requests PHP/login-request.php", true);
-   document.getElementById('botn').innerHTML = "Loading";
+   document.getElementById('sub-btn').innerHTML = "Loading..";
    request.onreadystatechange = () => {
       if (request.readyState === 4 && request.status === 200) {
          document.getElementById("msg").innerHTML = request.responseText;
@@ -20,8 +20,9 @@ const login = () => {
          if(request.responseText == ""){
             window.location = "dashboard.php";
          }
+         document.getElementById('sub-btn').innerHTML = "Login";
       }
    }
    request.send(form);
-   document.getElementById('botn').innerHTML = "Login";
+   
 }
