@@ -50,7 +50,7 @@
                      <div class="stat">
                         <i class='bx bxs-user'></i>
                         <div class="value">
-                           <span>2100</span>
+                           <span><?php echo countItem('UserID', 'users') ?></span>
                            <p>Users</p>
                         </div>
                      </div>
